@@ -1,2 +1,2 @@
 # bootta_util
-Util class
+Util classes package(by Bootta)
