@@ -1,0 +1,1 @@
+[2017-04-25 02:21:44] [G:\Tools\bin\phpunit.phar] [Info] test log input

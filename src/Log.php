@@ -28,7 +28,7 @@ class Log {
      * @return bool If true log is saved successfully otherwise not
      */
     public static function info($msg, $module = "", $logs_file_by_date = true) {
-        if ($log_location) {
+        if (Log::$log_location) {
             $log_file_date = date("Y-m-d");
             $location_log_info = Log::$log_location;
             $called_from = ($_SERVER["SCRIPT_FILENAME"] ? $_SERVER["SCRIPT_FILENAME"] : "");
@@ -46,7 +46,7 @@ class Log {
     }
 
     public static function error($msg, $module = "", $logs_file_by_date = true) {
-        if ($log_location) {
+        if (Log::$log_location) {
             $log_file_date = date("Y-m-d");
             $location_log_error = Log::$log_location;
             $date = date("Y-m-d h:i:s");
