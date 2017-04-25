@@ -19,7 +19,12 @@ class TestLibrary extends TestCase {
         }
     }
 
-    public function testlog() {
+    public function testLogWhenNotInitialized() {
+        //Log::init(__DIR__);
+        Log::info("test log input");
+    }
+
+    public function testLogWhenInitialized() {
         Log::init(__DIR__);
         Log::info("test log input");
     }
