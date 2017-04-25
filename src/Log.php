@@ -54,7 +54,7 @@ class Log {
             $called_from = ($_SERVER["SCRIPT_FILENAME"] ? $_SERVER["SCRIPT_FILENAME"] : "");
             $message = "[{$date}] [{$called_from}] [{$level}] " . $msg . PHP_EOL;
 
-            error_log($message, 3, $location_log_error . "/" . ($module && strlen($module) > 0 ? $module . "_" : "") . ($logs_file_by_date ? "error" . $log_file_date . ".txt" : "error.txt"));
+            $result = error_log($message, 3, $location_log_error . "/" . ($module && strlen($module) > 0 ? $module . "_" : "") . ($logs_file_by_date ? "error" . $log_file_date . ".txt" : "error.txt"));
             return $result;
         } else {
             throw new LogNotInitializedException();
