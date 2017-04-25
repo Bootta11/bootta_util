@@ -2,6 +2,8 @@
 
 namespace Bootta\Util;
 
+use Exception;
+
 date_default_timezone_set('Europe/Sarajevo');
 
 class Log {
