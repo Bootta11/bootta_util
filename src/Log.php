@@ -12,6 +12,10 @@ class Log {
     private static $update_interval = 60;
     private static $last_update_time;
 
+    function __construct($path) {
+        Log::$log_location = $path;
+    }
+
     public static function init($path) {
 
         Log::$log_location = $path;

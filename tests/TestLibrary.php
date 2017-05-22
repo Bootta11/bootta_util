@@ -28,6 +28,11 @@ class TestLibrary extends TestCase {
         Log::init(__DIR__);
         Log::info("test log input");
     }
+    
+    public function testLogConstruct() {
+        $log = new Log(__DIR__);
+        $log->error("Test error log input");
+    }
 
 }
 
